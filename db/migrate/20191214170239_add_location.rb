@@ -7,7 +7,7 @@ class AddLocation < ActiveRecord::Migration[6.0]
       t.string :country
       t.datetime :visit_date
       t.string   :filepath
-      t.timestamps
+      t.timestamps default: -> {'current_timestamp'}
     end
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_14_171414) do
+ActiveRecord::Schema.define(version: 2019_12_14_170239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,18 +26,12 @@ ActiveRecord::Schema.define(version: 2019_12_14_171414) do
   create_table "locations", force: :cascade do |t|
     t.float "latitude"
     t.float "longitude"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.datetime "date"
+    t.string "city"
+    t.string "country"
+    t.datetime "visit_date"
     t.string "filepath"
-    t.bigint "location_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["location_id"], name: "index_photos_on_location_id"
+    t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
-  add_foreign_key "photos", "locations"
 end
