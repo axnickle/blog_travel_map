@@ -1,0 +1,13 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.photo_list{
+  list-style: none;
+  padding-left: 1rem;
+}
+.photo {
+  display: block;
+  width: 400px;
+  margin-bottom: 1rem;
+}

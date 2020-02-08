@@ -1,0 +1,18 @@
+<h1>Show selected article</h1>
+
+<h2>
+ <%= @article.title %>
+</h2>
+  <%= image_tag "photos/#{@article.image_file}" %>
+
+<p>
+ Description: <%= @article.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_article_path(@article) %>
+</p>
+
+<p>
+  <%= render 'articles/form', article: @article %>
+</p>
