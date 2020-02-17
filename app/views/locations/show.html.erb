@@ -1,13 +1,14 @@
-<h1>Show selected location</h1>
+<h1>
+  <%= @location.name %>
+</h1>
+<p>
+  <%= @location.description %>
+</p>
 
 <h2>
- <%= @location.city %>
+ <%= @location.city %>, <%= @location.state %>,  <%= @location.country %>
 </h2>
 
-<h2>
- <%= @location.state %>
-</h2>
-
-<h2>
- <%= @location.country %>
-</h2>
+<% 5.times do %>
+<p> photo </p>
+<% end %>
