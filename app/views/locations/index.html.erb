@@ -1,0 +1,19 @@
+<h1>Listing all locations</h1>
+
+<table>
+ <tr>
+  <th>City</th>
+  <th>State</th>
+  <th>Country</th>
+  <th>visit date</th>
+ </tr>
+ <% @locations.each do |location| %>
+ <tr>
+  <td><%= location.city %></td>
+  <td><%= location.state %></td>
+  <td><%= location.country %></td>
+  <td><%= location.visit_date %></td>
+  <td><%= link_to 'Show', location_path(location) %></td>
+ </tr>
+ <% end %>
+</table>
