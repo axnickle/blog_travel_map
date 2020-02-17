@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Location.destroy_all
+Location.create([
+  {name: "Pacific Ocean", description: "the really big ocean off the west of US", state:"California", city:"San Francisco", latitude: 37.780079, longitude: -122.420174, visit_date: "2020/01/01", country: "USA"},
+])
+10.times do
+  Location.create([
+    {name: Faker::Movies::HarryPotter.location,
+       description: Faker::Lorem.sentence,
+       state:"California",
+       city:"San Francisco",
+       latitude: 37.780079,
+       longitude: -122.420174,
+       visit_date: Faker::Date.between(from: 2.days.ago, to: Date.today),
+       country: "USA"},
+  ])
+end
