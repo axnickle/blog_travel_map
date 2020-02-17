@@ -29,12 +29,11 @@ ActiveRecord::Schema.define(version: 2020_02_17_010956) do
     t.string "city"
     t.string "country"
     t.datetime "visit_date"
-    t.string "filepath"
     t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "state"
-    t.string "photo_name"
-    t.string "photo_description"
+    t.string "name"
+    t.string "description"
   end
 
 end
