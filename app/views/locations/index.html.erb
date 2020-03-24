@@ -1,4 +1,6 @@
 <h1>Listing all locations</h1>
+<!--tr- new row in the table -->
+<!-- th table header/lable for each column -->
 
 <table>
  <tr>
@@ -13,6 +15,10 @@
   <th>Actions</th>
  </tr>
  <% @locations.each do |location| %>
+ <!-- using this method from controller- @locations = Location.all -
+ to go through and render info for each loccation, thus @locations.each -->
+
+  <!-- td - table data- info within the table -->
  <tr>
   <td><%= location.name %></td>
   <td><%= location.description %></td>
