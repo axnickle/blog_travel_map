@@ -11,9 +11,10 @@ namespace :db do
     source_file = Rails.root.join('lib', 'tasks', 'data', 'locations.csv')
 
       CSV.foreach(source_file, headers: true).each do |row| #each row in the database/csv file
-        # location = Location.create!(row.to_h) #to covert to a hash
-        # puts location.name
-        Location.last
+        # NOT sure why there's an error
+        location = Location.create!(row.to_h) #to covert to a hash
+        puts location.name
+
       end
 
   end
