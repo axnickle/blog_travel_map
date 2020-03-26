@@ -6,7 +6,7 @@ require 'csv'
 namespace :db do
   desc "Populate Location data from CSV file"
 
-  task :populate_locations do
+  task populate_locations: :environment do
 
     source_file = Rails.root.join('lib', 'tasks', 'data', 'locations.csv')
 
