@@ -2,6 +2,9 @@ class Location < ActiveRecord::Base
   #name is one of the unique columns in the locations table (see schema.rb)
   validates :name, uniqueness: true
   validates :name, presence: true
+  validates :name,
+            presence: true,
+            uniqueness: { case_sensitive: false}
   validates :longitude, presence: true
   validates :latitude, presence: true
 end
