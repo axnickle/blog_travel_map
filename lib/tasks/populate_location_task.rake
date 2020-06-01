@@ -1,5 +1,5 @@
 
-# give me access to Ruby's CSV class
+# gives access to Ruby's CSV class
 require 'csv'
 
 # write your task that loops through the csv file line-by-line

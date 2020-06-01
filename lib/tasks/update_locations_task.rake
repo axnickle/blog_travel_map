@@ -9,8 +9,8 @@ namespace :db do
       source_file = Rails.root.join('lib', 'tasks', 'data', 'locations.csv')
 
       CSV.foreach(source_file, headers: true).each do |row|
-        # if it cannot find the record in the database, it'll create one
-        # else, it'll update ALL attributes 
+        # if it canNOT find the record in the database, it'll CREATE one
+        # if it CAN find a matching record, it'll RETURN the matching one
       location = Location.where(name: row["name"]).first_or_create!(row.to_h)
       #location =  Location.find_or_create_by(name: row["name"])
       puts location.name
