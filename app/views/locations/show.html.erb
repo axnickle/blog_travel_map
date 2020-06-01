@@ -1,3 +1,4 @@
+<% provide(:title, 'List of photos') %>
 <h1>
   <%= @location.name %>
 </h1>
@@ -12,3 +13,5 @@
 <% 5.times do %>
 <p> photo </p>
 <% end %>
+
+<%= link_to 'Add a new photo', new_photo_path %>
