@@ -25,7 +25,7 @@ body{
   margin: 0;
 }
 
-ul{                              /* gives more flexbility *?
+ul{                              /* gives more flexbility */
   margin: 0;
   padding: 0;
 
@@ -36,7 +36,7 @@ ul{                              /* gives more flexbility *?
 li{
   list-style-type: none;
 
-  /*when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side*/
+  /* when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side */
   margin: 0 2vw;
 }
 
@@ -80,46 +80,3 @@ that have a width less or equal than 500px*/
     display: block;
   }
 }
-
-// /* add the button to press in order to open/close the navigation menu*/
-// <nav>
-//   <ul>
-//       <!-- button here -->
-//       <button> 🞬 </button>
-//     <li>
-//       <!-- link one -->
-//       <a href="#about"> About </a>
-//     </li>
-//   </ul>
-// </nav>
-//
-// /* add re-appear if we are on a small screen */
-// @media only screen and (max-width: 500px) {
-//    ....
-//
-//   button{
-//     /*makes the button visible*/
-//     display: block;
-//
-//     /*since we are here, we can style it a little bit!*/
-//     padding: 2vw;
-//     font-size: 3vh;
-//     background-color: #AFE0FF;
-//     border: none;
-//
-//     /*outline none removes the default blue border that appears anytime you click on the button*/
-//     outline: none;
-//
-//     cursor: pointer;
-//   }
-// }
-//
-// /* nav bar align left */
-// button{
-//     display: block;
-//     ...
-//     cursor: pointer;
-//
-//     /*this put the button on the left*/
-//     align-self: flex-start;
-//   }
