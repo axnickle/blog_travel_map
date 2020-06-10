@@ -1,4 +1,5 @@
-<h1>Listing all locations</h1>
+<p id="notice"><%= notice %></p>
+<h1>Locations Traveled</h1>
 <!--tr- new row in the table -->
 <!-- th table header/lable for each column -->
 
@@ -14,21 +15,24 @@
   <th>visit date</th>
   <th>Actions</th>
  </tr>
+
+ <tbody>
  <% @locations.each do |location| %>
  <!-- using this method from controller- @locations = Location.all -
  to go through and render info for each location, thus @locations.each -->
 
   <!-- td - table data- info within the table -->
- <tr>
-  <td><%= location.name %></td>
-  <td><%= location.description %></td>
-  <td><%= location.longitude%></td>
-  <td><%= location.latitude %></td>
-  <td><%= location.city %></td>
-  <td><%= location.state %></td>
-  <td><%= location.country %></td>
-  <td><%= location.visit_date %></td>
-  <td><%= link_to 'Show', location_path(location) %></td>
- </tr>
+   <tr>
+      <td><%= location.name %></td>
+      <td><%= location.description %></td>
+      <td><%= location.longitude%></td>
+      <td><%= location.latitude %></td>
+      <td><%= location.city %></td>
+      <td><%= location.state %></td>
+      <td><%= location.country %></td>
+      <td><%= location.visit_date %></td>
+      <td><%= link_to 'Show', location_path(location) %></td>
+    </tr>
  <% end %>
+ </tbody>
 </table>

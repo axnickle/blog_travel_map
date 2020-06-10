@@ -1,0 +1,125 @@
+/* mixins, variables, etc. */
+li{                                /*all my list item don't need to have a list style" */
+  list-style-type: none;
+}
+
+a{                                /* gets rid of underline */
+  text-decoration: none;
+}
+
+nav{                             /* 100% of the viewport width */
+  width: 100vw;
+}
+
+nav{                             /* background property */
+  width: 100vw;
+  background-color: #D6EFFF;
+}
+
+ul{                               /* getting rid of indentation of the list */
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+}
+
+ul{                              /* gives more flexbility *?
+  margin: 0;
+  padding: 0;
+
+  /*this option by default dispose the elements in a row (flex-direction: row)*/
+  display: flex;
+}
+
+li{
+  list-style-type: none;
+
+  /*when I specify 2 values to margin, the first one is for the top and bottom side, the second for the left and right side*/
+  margin: 0 2vw;
+}
+
+li{
+  list-style-type: none;
+  margin: 0 2vw;
+  /* our font-size will be 3% of the height of the viewport */
+  font-size: 3vh;
+}
+
+a{
+  text-decoration: none;
+
+  /*below I changed the color*/
+  color: black;
+  /*I added some padding*/
+  padding: 2vw;
+  /*also changed the font family but that's totally irrelevant*/
+  font-family: monospace;
+}
+
+a:hover{                                /* element:hover - /*property that will change when I move the mouse on the element here*/
+  background-color: #C6E9FF;
+}
+
+/*change the layout of the navigation bar for all the screens
+that have a width less or equal than 500px*/
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul{
+    flex-direction: column;
+  }
+
+  /* deletes margin on top or bottom of the a tag*/
+  li{
+    margin: 0;
+  }
+ /* makes sure that the a tag will take the entire screen*/
+  a{
+    display: block;
+  }
+}
+
+// /* add the button to press in order to open/close the navigation menu*/
+// <nav>
+//   <ul>
+//       <!-- button here -->
+//       <button> 🞬 </button>
+//     <li>
+//       <!-- link one -->
+//       <a href="#about"> About </a>
+//     </li>
+//   </ul>
+// </nav>
+//
+// /* add re-appear if we are on a small screen */
+// @media only screen and (max-width: 500px) {
+//    ....
+//
+//   button{
+//     /*makes the button visible*/
+//     display: block;
+//
+//     /*since we are here, we can style it a little bit!*/
+//     padding: 2vw;
+//     font-size: 3vh;
+//     background-color: #AFE0FF;
+//     border: none;
+//
+//     /*outline none removes the default blue border that appears anytime you click on the button*/
+//     outline: none;
+//
+//     cursor: pointer;
+//   }
+// }
+//
+// /* nav bar align left */
+// button{
+//     display: block;
+//     ...
+//     cursor: pointer;
+//
+//     /*this put the button on the left*/
+//     align-self: flex-start;
+//   }

@@ -1,0 +1,34 @@
+<% provide(:title, "About") %>
+<nav>
+  <ul>
+    <li>
+      <!-- link -->
+      <a href="#about"> About </a>
+    </li>
+    <li>
+      <!-- link -->
+      <a href="#locations"> Locations </a>
+    </li>
+    <li>
+      <!-- link -->
+      <a href="#photos"> Photos </a>
+    </li>
+    <li>
+    <!-- link -->
+      <a href="#login"> Log In </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="center jumbotron">
+  <h1> Welcome to Anna's Blog</h1>
+
+  <%= link_to "Locations Traveled", locations_index_path %>
+  <%= link_to "Photos", photos_index_path %>
+</div>
+
+
+
+
+
+ <p>© <%= Date.today.year %> Created by Anna Nickle</p>
