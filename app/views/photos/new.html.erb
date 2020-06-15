@@ -1,0 +1,13 @@
+<% provide(:title, 'New photo') %>
+<h1>New photo</h1>
+
+<%= form_for([@location, @photo]) do |f| %>
+  <div class="field">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+  <div>
+    <%= f.submit %>
+    <%= link_to "Cancel", @location, class: 'button' %> <!-- link to location show page -->
+  </div>
+<% end %>

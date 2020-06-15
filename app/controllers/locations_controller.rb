@@ -1,11 +1,19 @@
 class LocationsController < ApplicationController
+  # from url locations/1
+  def show
+    puts "*********** #{params}"
+    @location = Location.find(params[:id])
+  end
+
   def index
     @locations = Location.all
   end
 
-  def show
-    @location = Location.find(params[:id])
+  def new
+    @location = Location.new
+    @photos = Photo.all
   end
+
 
 #both Location.all is a model method defined by Rails
 #find - only expects you to give it the 'ID' - only find by (params[:id])
