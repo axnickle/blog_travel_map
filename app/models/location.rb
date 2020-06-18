@@ -2,6 +2,9 @@ class Location < ActiveRecord::Base
   #name is one of the unique columns in the locations table (see schema.rb)
   has_many :photos
 
+  validates :email, :password, uniqueness: true
+  validates :email, :password, presence: true # make sure these fields are not empty
+
   validates :name, uniqueness: true
   validates :name, presence: true
   validates :name,
