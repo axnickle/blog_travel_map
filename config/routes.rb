@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users           # no need to set up individual routes if User is the name of model
+
+  #get   '/login',           to: 'login#'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root  'home#home' # works
   get   '/locations/index', to: 'locations#index' #render locations view - works
@@ -11,6 +14,3 @@ Rails.application.routes.draw do
     resources :photos
   end
 end
-
-
-  #index - GET, POST, PATCH, DELETE - HTTP Verbs
