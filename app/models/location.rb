@@ -1,6 +1,6 @@
 class Location < ActiveRecord::Base
   #name is one of the unique columns in the locations table (see schema.rb)
-  has_many :photos
+  has_many :photos, dependent: :destroy # if a location is deleted, all of its photos are deleted too
 
   validates :name, uniqueness: true
   validates :name, presence: true

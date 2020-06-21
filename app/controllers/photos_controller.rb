@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @location = Location.find(params[:location_id]) #nested routes didn't work for line 12 & 13
+    @location = Location.find(params[:location_id]) 
     @photo = @location.photos.new # set up the association
     #@photo = Photo.new
   end

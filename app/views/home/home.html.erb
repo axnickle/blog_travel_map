@@ -1,17 +1,17 @@
-<% provide(:title, "About") %>
+<% provide(:title, "Home") %>
 <nav>
   <ul>
     <li>
       <!-- link -->
-      <a href="#about"> About </a>
+      <a href="<%= about_path(@about) %>"> About </a>
     </li>
     <li>
       <!-- link -->
-      <a href="#locations"> Locations </a>
+      <a href="<%= locations_index_path(@locations) %>">Locations</a>
     </li>
     <li>
       <!-- link -->
-      <a href="#photos"> Photos </a>
+      <a href="<%= photos_index_path(@photos) %>">Photos</a>
     </li>
     <li>
     <!-- link -->
@@ -26,14 +26,12 @@
 </nav>
 
 <div class="center jumbotron">
-  <h1> Welcome to Anna's Blog</h1>
+  <br>
+  <p style="font-family:Didot; color:black; font-size: 30px;"> Welcome to Anna's Blog</p>
 
-  <%= link_to "Locations Traveled", locations_index_path %> <!-- may be replaced as locations_path -->
-  <%= link_to "Photos", photos_index_path %>
+  <br>
+  <%#= link_to "Locations Traveled", locations_index_path %> <!-- may be replaced as locations_path -->
+  <%#= link_to "Photos", photos_index_path %>
 </div>
 
-
-
-
-
- <p>© <%= Date.today.year %> Created by Anna Nickle</p>
+ <p style="font-family:Didot; color:black; font-size: 14px;">© <%= Date.today.year %> Created by Anna Nickle</p>
