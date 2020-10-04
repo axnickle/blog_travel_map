@@ -6,11 +6,13 @@
              <!-- "==" booleans -->
 
         <% unless controller_name == "locations" %>
+        <%#= link_to "Locations Traveled", locations_index_path %>
         <%= link_to "Locations Traveled", locations_index_path %>
         <% end %>
 
         <% unless controller_name == "photos" %>
-        <%= link_to "Photos", photos_index_path %>
+        <%#= link_to "Photos", photos_index_path %>
+        <%= link_to "Photos", photos_path %>
         <% end %>
 
          <%#= link_to "Log in", login_path %> |

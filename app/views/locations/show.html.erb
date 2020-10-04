@@ -1,14 +1,20 @@
-<h1>
+<div>
+  <strong>Location</strong>
   <%= @location.name %>
-</h1>
-<p>
+</div>
+
+<div style="padding-left:80px;">
   <%= @location.description %>
-</p>
-
-<h2>
+</div>
+<div style="padding-left:80px;">
  <%= @location.city %>, <%= @location.state %>,  <%= @location.country %>
-</h2>
+</div>
 
-<% 5.times do %>
+<%# 5.times do %>
+<%= @location.photos.each do |photo| %>
 <p> photo </p>
 <% end %>
+
+<p>
+  <%= link_to @location.name %>
+</p>
