@@ -14,34 +14,7 @@
   </head>
 
   <body>
-  <nav>
-  <ul>
-    <li>
-      <%= link_to("Home", root_path) %>
-    </li>
-    <li>
-      <!-- link -->
-      <%= link_to("About", about_path) %>
-    </li>
-    <li>
-      <!-- link -->
-      <%= link_to("Locations", locations_path) %>
-    </li>
-    <li>
-      <!-- link -->
-      <%= link_to("Photos", photos_path) %>
-    </li>
-    <li>
-    <!-- link -->
-    <!-- <a href="/">Home</a> -->
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to("Log in", new_user_session_path) %>
-      <% end %>
-    </li>
-  </ul>
-</nav>
+    <%= render partial: "shared/navbar" %>
     <% flash.each do |name, msg| %>
         <ul>
          <li><%= msg %></li>
