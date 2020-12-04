@@ -1,6 +1,6 @@
 class Location < ActiveRecord::Base
   #name is one of the unique columns in the locations table (see schema.rb)
-  has_many :photos
+  has_many :photos, dependent: :destroy
 
   validates :email, :password, uniqueness: true
   validates :email, :password, presence: true # make sure these fields are not empty
@@ -24,3 +24,6 @@ end
 #making a validation that requires the presence of an attribute is to help you make sure
   #that you are getting all of the data you need to make your app work.
     #Adding a uniqueness constraint helps to make sure users don't enter duplicate data.
+
+#has_many :photos, dependent: :destroy
+  #when a location is deleted, all of its photos are deleted too

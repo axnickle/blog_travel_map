@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <%= render partial: "shared/navbar" %>
     <% flash.each do |name, msg| %>
         <ul>
          <li><%= msg %></li>

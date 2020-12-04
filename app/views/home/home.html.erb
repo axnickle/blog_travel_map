@@ -1,35 +1,10 @@
 <% provide(:title, "About") %>
-<nav>
-  <ul>
-    <li>
-      <!-- link -->
-      <a href="#about"> About </a>
-    </li>
-    <li>
-      <!-- link -->
-      <a href="#locations"> Locations </a>
-    </li>
-    <li>
-      <!-- link -->
-      <a href="#photos"> Photos </a>
-    </li>
-    <li>
-    <!-- link -->
-    <!-- <a href="/">Home</a> -->
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to("Log in", new_user_session_path) %>
-      <% end %>
-    </li>
-  </ul>
-</nav>
 
 <div class="center jumbotron">
-  <h1> Welcome to Anna's Blog</h1>
+  <h1> Welcome to Anna's Blog </h1>
 
-  <%= link_to "Locations Traveled", locations_index_path %> <!-- may be replaced as locations_path -->
-  <%= link_to "Photos", photos_index_path %>
+  <%= link_to "Locations Traveled", locations_path %> <!-- may be replaced as locations_path -->
+  <%= link_to "Photos", photos_path %>
 </div>
 
 

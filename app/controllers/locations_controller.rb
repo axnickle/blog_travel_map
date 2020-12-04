@@ -1,7 +1,6 @@
 class LocationsController < ApplicationController
   # from url locations/1
   def show
-    puts "*********** #{params}"
     @location = Location.find(params[:id])
   end
 
@@ -11,7 +10,6 @@ class LocationsController < ApplicationController
 
   def new
     @location = Location.new
-    @photos = Photo.all
   end
 
 
