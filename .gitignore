@@ -31,3 +31,5 @@
 
 # Ignore .DS_store files
 .DS_store
+
+/node_modules

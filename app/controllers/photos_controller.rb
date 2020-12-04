@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   # url /photos/1
   def show
-    @photo = Photo.find(params[:id]) # @
+    @photo = Photo.find(params[:id]) 
   end
 
   def index
@@ -27,7 +27,7 @@ end
 private
 
   def photo_params
-  params.require(:photo).permit(:name, :image_url, :caption)
+    params.require(:photo).permit(:name, :image_url, :caption)
   end
 end
 
