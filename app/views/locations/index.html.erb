@@ -6,6 +6,7 @@
 <table>
  <tr>
   <th>Name</th>
+  <th>Photo</th>
   <th>Description</th>
   <th>Longitude</th>
   <th>Latitude</th>
@@ -24,6 +25,7 @@
   <!-- td - table data- info within the table -->
    <tr>
       <td><%= location.name %></td>
+      <td><%= image_source(location.photos&.first) %></td>
       <td><%= location.description %></td>
       <td><%= location.longitude%></td>
       <td><%= location.latitude %></td>

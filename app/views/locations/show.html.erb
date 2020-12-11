@@ -10,16 +10,11 @@
  <%= @location.city %>, <%= @location.state %>,  <%= @location.country %>
 </div>
 
-<%# 5.times do %>
 <% @location.photos.each do |photo| %>   <!-- looping through each photo -->
-  <% if photo.filepath %>
-    <%= image_tag photo.filepath%>           <!-- need image tag for each photo -->
-  <% elsif photo.image_url %>
-    <%= image_tag photo.image_url%>
-  <% end %>
-<!-- change filepath to image_url -->
+  <%= image_source(photo) %>
 <% end %>
 
 <p>
   <%= link_to @location.name %>
 </p>
+
